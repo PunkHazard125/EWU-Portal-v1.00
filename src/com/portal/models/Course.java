@@ -3,17 +3,18 @@ package com.portal.models;
 public class Course {
 
     private final String code;
-    private final int section;
+    private final int capacity;
     private final double credit;
     private final String time_slot;
+    private final String dept;
 
-    public Course(String code, int section, double credit, String time_slot) {
+    public Course(String code, int capacity, double credit, String time_slot, String dept) {
 
         this.code = code;
-        this.section = section;
+        this.capacity = capacity;
         this.credit = credit;
         this.time_slot = time_slot;
-
+        this.dept = dept;
     }
 
     public String get_code() {
@@ -22,9 +23,9 @@ public class Course {
 
     }
 
-    public int get_section() {
+    public int get_capacity() {
 
-        return section;
+        return capacity;
 
     }
 
@@ -37,6 +38,12 @@ public class Course {
     public String get_time_slot() {
 
         return time_slot;
+
+    }
+
+    public String get_dept() {
+
+        return dept;
 
     }
 }
